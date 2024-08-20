@@ -1,0 +1,27 @@
+body {
+	background-color: rgb(30, 31, 33);
+	color: white;
+}
+
+figure {
+	background-color: rgb(219, 230, 241);
+}
+
+figure img {
+	animation: fadeIn auto linear;
+	/* animation-timeline: view(); */
+	/* Can specify offsets */
+	/* view-timeline-axis: block; */
+	/* animation-range: entry 25% cover 50%; */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		clip-path: inset(45% 20% 45% 20%);
+	}
+	to {
+		opacity: 1;
+		clip-path: inset(0% 0% 0% 0%);
+	}
+}

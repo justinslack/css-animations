@@ -1,0 +1,29 @@
+/* Progress bar */
+
+.progress-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: clamp(1rem, 2vw, 5rem);
+}
+
+.progress {
+	height: 0.5rem;
+	background: rgb(59, 142, 230) 100%;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	scale: 0 1;
+	/* transform-origin: left; */
+
+	/* animation: scaleProgress auto linear; */
+	/* animation-timeline: scroll(root); */
+	/* x and y, block and inline */
+}
+
+@keyframes scaleProgress {
+	to {
+		scale: 1 1;
+	}
+}
