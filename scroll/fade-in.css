@@ -9,19 +9,21 @@ figure {
 
 figure img {
 	animation: fadeIn auto linear;
-	/* animation-timeline: view(); */
+	animation-timeline: view();
 	/* Can specify offsets */
-	/* view-timeline-axis: block; */
-	/* animation-range: entry 25% cover 50%; */
+	view-timeline-axis: block;
+	animation-range: entry 25% cover 50%;
 }
 
 @keyframes fadeIn {
 	from {
+		translate: 100 100;
 		opacity: 0;
 		clip-path: inset(45% 20% 45% 20%);
 	}
 	to {
 		opacity: 1;
 		clip-path: inset(0% 0% 0% 0%);
+		translate: 0 0;
 	}
 }

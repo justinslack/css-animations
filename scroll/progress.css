@@ -15,10 +15,10 @@
 	width: 100%;
 	z-index: 1;
 	scale: 0 1;
-	/* transform-origin: left; */
+	transform-origin: left;
 
-	/* animation: scaleProgress auto linear; */
-	/* animation-timeline: scroll(root); */
+	animation: scaleProgress auto linear;
+	animation-timeline: scroll(root);
 	/* x and y, block and inline */
 }
 
