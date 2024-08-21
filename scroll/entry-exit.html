@@ -5,21 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Entry exit animations</title>
-  <link rel="stylesheet" href="/global.css">
   <style>
-    body {
-      display: grid;
-      font-family: system-ui, sans-serif;
+    section {
+      /* display: grid; */
+      font-family: Avenir, system-ui, sans-serif;
       place-items: center;
       height: 100dvh;
       margin: 0;
       position: relative;
+      background-color: aliceblue;
     }
 
     button {
       background: rgb(109, 144, 180);
       border: 0;
       color: white;
+      font-family: inherit;
       font-size: 1.25rem;
       padding: 0.5rem 1rem;
       border-radius: 5px;
@@ -29,29 +30,36 @@
       outline: 2px solid hsla(211, 12%, 48%, 1);
     }
 
-    /* [popover] {
-      position: absolute;
+    [popover] {
+      padding: 2rem;
+      font-size: 1.25rem;
+      border: 0;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+      /* position: absolute;
       top: 1rem;
       left: 0;
       right: 0;
-      margin: 0 auto;
-      transition: opacity 0.2s, transform 0.2s, display 0.2s allow-discrete;
+      margin: 0 auto; */
+      /* transition: opacity 0.2s, transform 0.2s, display 0.2s allow-discrete; */
 
-      opacity: 0;
-      transform: translateY(3rem);
+      /* opacity: 0; */
+      /* transform: translateY(3rem); */
 
-      &:popover-open {
-        opacity: 1;
-        transform: none;
+      /* &:popover-open { */
+      /* opacity: 1; */
+      /* transform: none; */
 
-        @starting-style {
-          & {
-            opacity: 0;
-            transform: translateY(-1rem);
-          }
-        }
-      } */
+      /* @starting-style { */
+      /* & { */
+      /* opacity: 0; */
+      /* transform: translateY(-1rem); */
+      /* } */
+      /* } */
+      /* } */
     }
+
 
     /* ::backdrop {
       background: rgb(190 190 190 / 50%);
@@ -62,15 +70,8 @@
 <body>
   <section>
     <button popovertarget="pop">Open popover</button>
-    <div popover id="pop">If this isn't cool, I don't know what is!</div>
+    <div popover id="pop">It's a popover! No JS. Nice.</div>
   </section>
-  <script>
-    document.getElementsByClassName('close-button').forEach(el => {
-      el.addEventListener('click', e => {
-        el.parentElement.classList.add('closed')
-      })
-    })
-  </script>
 </body>
 
 </html>
